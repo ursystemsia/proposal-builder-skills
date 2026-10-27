@@ -28,7 +28,7 @@ The user may provide profile text, files, portfolio samples, URLs, or access thr
 
 For every meaningful capability or portfolio claim, use one of these labels:
 
-- **Verified**: directly supported by supplied evidence or an explicit user confirmation.
+- **Verified**: supported by an explicit user confirmation or reviewed evidence. Record which one applies instead of treating them as equivalent.
 - **Transferable**: relevant experience that is not the same as the target service.
 - **Practiced**: used in a prototype, exercise, or personal project without a verified client outcome.
 - **Learning**: currently studying and not ready to promise as independent delivery.
@@ -42,11 +42,13 @@ Use [references/profile-schema.md](references/profile-schema.md). Keep the profi
 
 Separate stable facts from opportunity-specific values. Availability, rates, platform status, and portfolio links may change, so include `last_confirmed` dates and mark stale values for confirmation.
 
+For each evidence item, record `verification: user_confirmed` when the user explicitly confirms the claim but the underlying artifact was not inspected, or `verification: artifact_reviewed` when the agent actually inspected the supporting artifact. Use both values when both occurred. Keep `claim_last_confirmed` separate from `artifact_last_reviewed`.
+
 Before saving, show the proposed profile when it contains personal or professional claims that will later be sent to clients. Correct only what the user confirms. Saving the profile does not authorize editing Upwork or Workana.
 
 ## Update behavior
 
 When a profile exists, preserve confirmed evidence and update only changed sections. Record newly verified items and downgrade stale or contradicted claims. Do not accumulate rejected wording or conversation history in the profile.
 
-Return the profile, unresolved questions, and the next recommended test. The profile supports proposal drafting; it does not guarantee eligibility, platform compliance, or project success.
+Return the profile, the full unresolved list, the single next question to ask, and the next recommended test. Do not ask every unresolved question in one turn. The profile supports proposal drafting; it does not guarantee eligibility, platform compliance, or project success.
 

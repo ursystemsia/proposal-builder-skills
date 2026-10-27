@@ -17,8 +17,11 @@ proposal_languages: [English, Spanish]
 ## Services
 ### Service name
 - level: Verified | Transferable | Practiced | Learning
+- verification: user_confirmed | artifact_reviewed | [user_confirmed, artifact_reviewed]
 - can_deliver:
 - must_validate:
+- claim_last_confirmed:
+- artifact_last_reviewed:
 - evidence_ids:
 
 ## Experience
@@ -35,6 +38,9 @@ proposal_languages: [English, Spanish]
 - ownership and role:
 - problem and deliverables:
 - verified outcome:
+- verification: user_confirmed | artifact_reviewed | [user_confirmed, artifact_reviewed]
+- claim_last_confirmed:
+- artifact_last_reviewed:
 - public link or platform location:
 - privacy or sharing limit:
 - evidence_ids:
@@ -69,9 +75,12 @@ proposal_languages: [English, Spanish]
 - platform-specific limits:
 
 ## Evidence index
-- E1: source, location or URL, reviewed date, what it supports
+- E1: source, location or URL, verification type, confirmation date, artifact review date if any, and what it supports
 
 ## Unknowns to confirm
 - Material unknown
+
+## Next question
+- Ask only the single highest-impact unresolved question
 ```
 
